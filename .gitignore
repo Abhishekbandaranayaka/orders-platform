@@ -1,0 +1,44 @@
+# --- Top-level ignores (Docker volumes, OS junk)
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Docker & local runtime
+mysql/
+redis/
+vendor/           # if you have a top-level vendor (usually not)
+node_modules/     # if you have a top-level node_modules (usually not)
+
+# --- Laravel app ignores (inside src/)
+src/vendor/
+src/node_modules/
+src/public/hot
+src/public/storage
+src/storage/*.key
+src/storage/app/*.csv
+src/storage/app/*.json
+src/storage/app/imports/*
+!src/storage/app/public/.gitkeep
+src/storage/debugbar/*
+src/storage/framework/cache/*
+src/storage/framework/sessions/*
+src/storage/framework/testing/*
+src/storage/framework/views/*
+src/storage/logs/*
+src/.env
+src/.phpunit.cache
+src/homestead.yaml
+src/.env.backup
+src/.php-cs-fixer.cache
+
+# Composer & NPM artifacts
+src/composer.lock
+src/package-lock.json
+src/pnpm-lock.yaml
+src/yarn.lock
+
+# IDE/editor
+.vscode/
+.idea/
+*.iml
